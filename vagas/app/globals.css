@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inria+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Maven+Pro&display=swap');
+
 @import "tailwindcss";
 
 :root {
@@ -71,7 +73,8 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
-@theme inline {
+@theme {
+  --font-display: 'Maven Pro', sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
