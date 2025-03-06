@@ -1,8 +1,10 @@
+import Logo from "./logo";
+
 export default function Navbar() {
     return (
-        <nav>
-            <img src="/logo.svg" alt="Logo" />
-            <ul>
+        <nav className="flex items-center justify-between py-6">
+            <Logo />
+            <ul className="flex items-center space-x-4 px-8">
                 <li>Home</li>
                 <li>Sobre</li>
                 <li>Vagas</li>
@@ -10,4 +12,4 @@ export default function Navbar() {
             </ul>
         </nav>
     )
-}
+}   
