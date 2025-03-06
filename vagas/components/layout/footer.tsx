@@ -12,9 +12,9 @@ export default function Footer() {
                     </p>
                 </div>
                 <div className="flex space-x-4">
-                    <Instagram />
-                    <Github />
-                    <Mail />
+                    <Instagram className="cursor-pointer transition duration-300 hover:text-blue-500"/>
+                    <Github className="cursor-pointer transition duration-300 hover:text-blue-500"/>
+                    <Mail className="cursor-pointer transition duration-300 hover:text-blue-500"/>
                 </div>
             </div>
         </footer>

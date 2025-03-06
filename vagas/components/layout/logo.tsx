@@ -10,7 +10,6 @@ const Logo = ({bg = 'light', ...props}: LogoProps) => (
     xmlns="http://www.w3.org/2000/svg"
     width={197}
     height={29}
-    viewBox="0 0 197 29"
     fill="none"
     {...props}
   >
