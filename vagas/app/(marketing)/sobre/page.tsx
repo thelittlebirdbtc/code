@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import peopleImg from '@/public/people1.png';
 
 export default function Sobre() {
     return (
@@ -26,7 +27,7 @@ export default function Sobre() {
             </p>
           </div>
         </div>
-        <Image src="/people1.png" alt="astronauta" width={500} height={500} />
+        <Image src={peopleImg} alt="astronauta" className='h-full w-lg' />
       </section>
     );
   }
