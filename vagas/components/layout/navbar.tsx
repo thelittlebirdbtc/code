@@ -1,17 +1,38 @@
-import { buttonVariants } from "../ui/button";
-import { cn } from "../../lib/utils";
-import Logo from "./logo";
+import { cn } from '@/lib/utils';
+import { buttonVariants } from '../ui/button';
+import Logo from './logo';
 
 export default function Navbar() {
-    return (
-        <nav className="w-full mx-auto max-w-5xl flex items-center justify-between py-6">
-            <Logo />
-            <main className="flex items-center space-x-4 px-8">
-                <a className={cn(buttonVariants({variant:"link"}))} href="/Home">Home</a>
-                <a className={cn(buttonVariants({variant:"link"}))} href="/Sobre">Sobre</a>
-                <a className={cn(buttonVariants({variant:"link"}))} href="/Vagas">Vagas</a>
-                <a className={cn(buttonVariants({variant:"link"}))} href="/Vagas/Cadastro">Cadastrar Vagas</a>
-            </main>
-        </nav>
-    )
-}  
+  return (
+    <nav className="max-w-5xl w-full flex justify-between py-4 mx-auto">
+      <div className="flex items-center">
+        <Logo />
+      </div>
+      <ul className="flex items-center gap-4">
+        <li>
+          <a className={cn(buttonVariants({ variant: 'link' }))} href="/home">
+            Home
+          </a>
+        </li>
+        <li>
+          <a className={cn(buttonVariants({ variant: 'link' }))} href="/sobre">
+            Sobre
+          </a>
+        </li>
+        <li>
+          <a className={cn(buttonVariants({ variant: 'link' }))} href="/vagas">
+            Vagas
+          </a>
+        </li>
+        <li>
+          <a
+            className={cn(buttonVariants({ variant: 'link' }))}
+            href="/vagas/cadastro"
+          >
+            Cadastrar Vaga
+          </a>
+        </li>
+      </ul>
+    </nav>
+  );
+}
