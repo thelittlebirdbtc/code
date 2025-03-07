@@ -26,7 +26,7 @@ export default function Sobre() {
             </p>
           </div>
         </div>
-        <Image src="/people.png" alt="astronauta" width={500} height={500} />
+        <Image src="/people1.png" alt="astronauta" width={500} height={500} />
       </section>
     );
   }
