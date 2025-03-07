@@ -10,7 +10,7 @@ export default function Navbar() {
       </div>
       <ul className="flex items-center gap-4">
         <li>
-          <a className={cn(buttonVariants({ variant: 'link' }))} href="/home">
+          <a className={cn(buttonVariants({ variant: 'link' }))} href="/">
             Home
           </a>
         </li>
