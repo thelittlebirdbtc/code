@@ -65,6 +65,7 @@ export default function Cadastro() {
                 className="rounded-xs border-gray-500"
                 id="schedule"
                 name="schedule"
+                title="Período"
               >
                 <option value="full-time">Período Integral</option>
                 <option value="part-time">Meio-Período</option>
