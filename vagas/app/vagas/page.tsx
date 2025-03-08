@@ -1,12 +1,23 @@
 import JobItem from "@/components/cards/job-item";
 import { Job } from "@/lib/types";
 
-export default async function Vagas() {
+async function fetchJobs() {
 
-  const response = await fetch("https://apis.codante.io/api/job-board/jobs");
+  const response = await fetch("https://apis.codante.io/api/job-board/jobs", {cache: "no-store"});
+
+  if (!response.ok) {
+    throw new Error("Algo deu errado ao buscar as vagas de emprego. Tente novamente mais tarde.");
+  }
+
   const json = await response.json();
   const jobs: Job[] = json.data;
 
+  return jobs;
+}
+
+export default async function Vagas() {  
+  
+  const jobs = await fetchJobs();
 
   return (
     <main className="py-10">
