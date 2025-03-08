@@ -1,30 +1,18 @@
 import JobItem from "@/components/cards/job-item";
+import { Job } from "@/lib/types";
 
-const job = {
-    id: "1",
-    tittle: "Desenvolvedor Frontend",
-    company: "Google",
-    city: "São Paulo",
-    salary: 10000,
-  }
+export default async function Vagas() {
 
-export default function Vagas() {
+  const response = await fetch("https://apis.codante.io/api/job-board/jobs");
+  const json = await response.json();
+  const jobs: Job[] = json.data;
+
+
   return (
     <main className="py-10">
       <h2 className="font-display mb-12 text-2xl font-bold">Todas as Vagas</h2>
       <div className="space-y-8">
-        <JobItem job={job} />
-        <JobItem job={job} />
-        <JobItem job={job} />
-        <JobItem job={job} />
-        <JobItem job={job} />
-        <JobItem job={job} />
-        <JobItem job={job} />
-        <JobItem job={job} />
-        <JobItem job={job} />
-        <JobItem job={job} />
-        <JobItem job={job} />
-        <JobItem job={job} />
+        {jobs.map((job) => <JobItem key={job.id} job={job} />)}
       </div>
     </main>
   );

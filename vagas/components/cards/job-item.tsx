@@ -1,12 +1,5 @@
+import { Job } from "@/lib/types";
 import { Button } from "../ui/button";
-
-type Job = {
-    id: string;
-    tittle: string;
-    company: string;
-    city: string;
-    salary: number;
-}
 
 type JobItemProps = {
     job: Job;
