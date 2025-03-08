@@ -1,5 +1,6 @@
 import { Job } from "@/lib/types";
 import { Button } from "../ui/button";
+import { redirectJob } from "@/lib/actions";
 
 type JobItemProps = {
     job: Job;
@@ -12,9 +13,9 @@ export default function JobItem({ job }: JobItemProps) {
       <h4 className="font-light text-gray-500">{job.company}</h4>
       <h4 className="font-light text-gray-500">{job.city}</h4>
       <h4 className="font-light text-gray-500">$ {job.salary}</h4>
-      <Button className="cursor-pointer" variant={"outline"}>
-        Mais
-      </Button>
+      <form action={redirectJob}>
+        <Button className="cursor-pointer" variant={"outline"}>Mais</Button>
+      </form>
     </article>
   );
 }
