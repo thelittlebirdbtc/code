@@ -25,6 +25,7 @@ export default function JobPostingCard({ job }: { job: Job }) {
             </p>
           </div>
           <form action={deleteJob}>
+            <input type="hidden" name="id" value={job.id} />
             <Button variant="destructive">Apagar Vaga</Button>
           </form>
         </div>
