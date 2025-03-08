@@ -1,6 +1,6 @@
 export type Job = {
     id: string;
-    tittle: string;
+    title: string;
     company: string;
     city: string;
     salary: number;
