@@ -3,13 +3,14 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import FormItem from "./form-item";
+import { createJob } from "@/lib/actions";
 
 export default function Cadastro() {
   return (
     <main>
       <h2 className="font-display mb-12 text-2xl font-bold">Cadastrar Vaga</h2>
       <Card className="mx-auto w-full py-8">
-        <form>
+        <form action = {createJob}>
           <CardContent className="space-y-6">
             <FormItem
               name="Título da Vaga"

@@ -20,6 +20,7 @@ redirect("/vagas");
 }
 
 export async function createJob(formData: FormData) {
+    
     const response = await fetch("https://apis.codante.io/api/job-board/jobs", {
         method: "POST",
         body: formData,
