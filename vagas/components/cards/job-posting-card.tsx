@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { Briefcase, DollarSign, MapPin, Users } from "lucide-react";
 import Link from "next/link";
 import { Job } from "@/lib/types";
+import { deleteJob } from "@/lib/actions";
 
 export default function JobPostingCard({ job }: { job: Job }) {
   return (
@@ -23,7 +24,9 @@ export default function JobPostingCard({ job }: { job: Job }) {
               </Link>
             </p>
           </div>
-          <Button variant="destructive">Apagar Vaga</Button>
+          <form action={deleteJob}>
+            <Button variant="destructive">Apagar Vaga</Button>
+          </form>
         </div>
       </CardHeader>
 
